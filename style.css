@@ -1,0 +1,129 @@
+/* Estilos gerais do corpo */
+html, body {
+    height: 100%; /* Garante que o corpo cubra toda a altura */
+    margin: 0; /* Remove margens */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #a0e1f1, #f0c9c9); /* Degradê suave */
+    background-size: 400% 400%; /* Para animação mais suave */
+    color: #333; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Espaçamento interno */
+    animation: backgroundAnimation 15s ease infinite; /* Animação suave do fundo */
+}
+
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Estilo do título */
+h1 {
+    color: #fff; /* Cor branca para destaque */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    font-size: 4em; /* Tamanho aumentado */
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7); /* Sombra mais pronunciada */
+    letter-spacing: 3px; /* Espaçamento entre letras */
+    padding: 10px 0; /* Espaçamento vertical */
+    transition: transform 0.3s; /* Suave */
+}
+
+/* Efeito de hover no título */
+h1:hover {
+    transform: scale(1.05); /* Leve aumento no tamanho ao passar o mouse */
+}
+
+/* Estilo da imagem do Pokémon */
+#pokemonImage {
+    border: 8px solid rgba(255, 255, 255, 0.9); /* Borda branca com transparência */
+    border-radius: 20px; /* Bordas mais arredondadas */
+    margin: 20px auto; /* Centraliza a imagem */
+    display: block; /* Faz a imagem ocupar toda a largura */
+    transition: transform 0.4s, box-shadow 0.4s; /* Transições suaves */
+}
+
+/* Efeito de zoom e sombra na imagem ao passar o mouse */
+#pokemonImage:hover {
+    transform: scale(1.1); /* Efeito de zoom */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6); /* Sombra mais profunda */
+}
+
+/* Estilo das opções de resposta */
+#options {
+    margin: 20px 0; /* Espaço acima e abaixo */
+}
+
+/* Estilo dos botões */
+button {
+    background: #ff6f61; /* Cor base */
+    color: white; /* Cor do texto */
+    border: none; /* Remove borda padrão */
+    border-radius: 25px; /* Bordas arredondadas */
+    padding: 15px 30px; /* Espaçamento interno */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    font-size: 1.2em; /* Tamanho da fonte */
+    margin: 10px; /* Margem ao redor do botão */
+    transition: all 0.3s; /* Transições suaves */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra do botão */
+}
+
+/* Efeito ao passar o mouse sobre os botões */
+button:hover {
+    background: #ff3e30; /* Cor mais intensa */
+    transform: translateY(-4px); /* Elevação ao passar o mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Sombra mais profunda */
+}
+
+/* Estilo do resultado */
+#result {
+    margin-top: 20px; /* Espaço acima do resultado */
+    font-size: 1.5em; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    color: #fff; /* Cor branca para resultado */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra do texto */
+    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    padding: 15px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    transition: background 0.3s; /* Efeito suave */
+}
+
+/* Efeito ao passar o mouse sobre o resultado */
+#result:hover {
+    background: rgba(0, 0, 0, 0.7); /* Aumenta a opacidade do fundo ao passar o mouse */
+}
+
+/* Estilo do botão "Próximo" */
+#nextButton {
+    background: #5bc0de; /* Azul suave */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 25px; /* Bordas arredondadas */
+    font-size: 1.2em; /* Tamanho da fonte */
+    transition: background 0.3s, transform 0.3s; /* Transições suaves */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra do botão */
+}
+
+/* Efeito ao passar o mouse sobre o botão "Próximo" */
+#nextButton:hover {
+    background: #31b0d5; /* Azul mais intenso ao passar o mouse */
+    transform: translateY(-4px); /* Elevação ao passar o mouse */
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.5em; /* Tamanho do título ajustado para telas menores */
+    }
+
+    button {
+        width: 90%; /* Botões ocupam quase toda a largura em telas pequenas */
+        padding: 10px; /* Ajuste de espaçamento interno */
+    }
+
+    #result {
+        font-size: 1.2em; /* Tamanho do resultado ajustado */
+    }
+}
